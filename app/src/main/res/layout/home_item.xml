@@ -103,6 +103,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/materialCardView2"
         app:layout_constraintTop_toBottomOf="@+id/lottieAnimations">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -130,7 +131,7 @@
         app:layout_constraintStart_toEndOf="@+id/materialCardView"
         app:layout_constraintTop_toTopOf="@+id/materialCardView">
 
-                <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
@@ -172,6 +173,75 @@
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/windyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/waterText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/waterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Water-Nem"
+        app:layout_constraintEnd_toStartOf="@+id/rainyPosibleText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/windyText"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rainyPosibleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="RianyPosible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/waterText"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Today"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windyText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView5"
+        style="bo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="24dp"
+        android:text="Next 7 Days >"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rainyPosibleText" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sevenDayRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
